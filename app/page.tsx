@@ -2,121 +2,90 @@ import type { Metadata } from "next";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: "Lication — Client Portal for Freelancers",
+  title: "Lication — Freelancer Client Portal",
   description:
-    "Lication is a simple client portal for freelancers to share updates, manage files, and keep client communication organized.",
-  keywords: [
-    "client portal",
-    "freelancer portal",
-    "freelancer client portal",
-    "project updates",
-    "client dashboard",
-  ],
-  robots: {
-    index: true,
-    follow: true,
-  },
+    "A clean client portal for freelancers to manage projects, files, and updates.",
 };
-
-const features = [
-  {
-    title: "Organized client workspace",
-    description:
-      "Keep files, updates, and conversations in one place instead of across random chats.",
-  },
-  {
-    title: "Cleaner handoffs",
-    description:
-      "Give each client a simple portal where they can follow progress without confusion.",
-  },
-  {
-    title: "Built for freelancers",
-    description:
-      "A focused experience for solo creators, agencies, and small service businesses.",
-  },
-];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <div className="mb-5 inline-flex rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-sm font-medium text-slate-700">
-              Temporary landing page
-            </div>
+    <main className="relative min-h-screen overflow-hidden bg-[#f8fbff] text-slate-900">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#eef6ff] to-[#dfefff]" />
 
-            <h1 className="max-w-xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Client portals made simple for freelancers.
-            </h1>
+      {/* Snowy mountain shapes */}
+      <div className="absolute bottom-0 left-0 w-full">
+        <svg
+          viewBox="0 0 1440 400"
+          className="w-full"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 320L180 170L320 280L520 80L760 300L980 140L1200 290L1440 110V400H0V320Z"
+            fill="#dbeafe"
+          />
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Lication helps freelancers give clients a clean, private place to
-              view updates, files, and progress — without messy back-and-forth.
-            </p>
+          <path
+            d="M0 340L210 220L390 330L620 130L840 320L1030 190L1240 320L1440 180V400H0V340Z"
+            fill="#bfdbfe"
+          />
+        </svg>
+      </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <SignUpButton mode="redirect">
-                <button className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
-                  Get started
-                </button>
-              </SignUpButton>
-
-              <SignInButton mode="redirect">
-                <button className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">
-                  Sign in
-                </button>
-              </SignInButton>
-            </div>
-
-            <p className="mt-4 text-sm text-slate-500">
-              Built with Clerk for auth and Vercel for deployment.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-            <div className="rounded-2xl bg-white p-5 shadow-sm">
-              <p className="text-sm font-medium text-slate-500">Preview</p>
-
-              <div className="mt-3 space-y-3">
-                <div className="h-3 w-3/4 rounded-full bg-slate-200" />
-                <div className="h-3 w-1/2 rounded-full bg-slate-200" />
-                <div className="h-3 w-5/6 rounded-full bg-slate-200" />
-              </div>
-
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-xl border border-slate-200 p-3">
-                  <div className="text-xs text-slate-500">Projects</div>
-                  <div className="mt-1 text-lg font-semibold">12</div>
-                </div>
-
-                <div className="rounded-xl border border-slate-200 p-3">
-                  <div className="text-xs text-slate-500">Clients</div>
-                  <div className="mt-1 text-lg font-semibold">08</div>
-                </div>
-
-                <div className="rounded-xl border border-slate-200 p-3">
-                  <div className="text-xs text-slate-500">Updates</div>
-                  <div className="mt-1 text-lg font-semibold">24</div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Content */}
+      <section className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
+        <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1 text-sm font-medium backdrop-blur">
+          Temporary Preview Build
         </div>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-3">
-          {features.map((feature) => (
-            <article
-              key={feature.title}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-            >
-              <h2 className="text-base font-semibold">{feature.title}</h2>
+        <h1 className="mt-8 max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+          Client portals for modern freelancers.
+        </h1>
 
-              <p className="mt-2 text-sm leading-7 text-slate-600">
-                {feature.description}
-              </p>
-            </article>
-          ))}
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          Lication helps freelancers share updates, manage projects, and give
+          clients a clean professional workspace.
+        </p>
+
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <SignUpButton mode="redirect">
+            <button className="rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-105 hover:bg-slate-700">
+              Get Started
+            </button>
+          </SignUpButton>
+
+          <SignInButton mode="redirect">
+            <button className="rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:scale-105 hover:bg-slate-50">
+              Sign In
+            </button>
+          </SignInButton>
+        </div>
+
+        <div className="mt-24 grid w-full max-w-5xl gap-6 md:grid-cols-3">
+          <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur">
+            <h2 className="text-lg font-semibold">Project Updates</h2>
+
+            <p className="mt-3 text-sm leading-7 text-slate-600">
+              Share progress and milestones with clients in a structured way.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur">
+            <h2 className="text-lg font-semibold">File Sharing</h2>
+
+            <p className="mt-3 text-sm leading-7 text-slate-600">
+              Upload deliverables and keep everything organized in one place.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur">
+            <h2 className="text-lg font-semibold">Professional Experience</h2>
+
+            <p className="mt-3 text-sm leading-7 text-slate-600">
+              Give clients a cleaner experience than messy chat threads.
+            </p>
+          </div>
         </div>
       </section>
     </main>
