@@ -3,7 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lication — Client Portal for Freelancers",
+  title: "Frovero — Client Portal for Freelancers",
   description: "A calm, professional space for files, feedback, and invoices.",
 };
 
