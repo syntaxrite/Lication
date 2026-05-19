@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: "Lication — Freelancer Client Portal",
+  title: "Frovero — Freelancer Client Portal",
   description: "A calm, professional space for files, feedback, and invoices.",
 };
 
@@ -38,7 +38,7 @@ export default function Home() {
           fontSize: "1.2rem", fontWeight: 500, color: "#1c1b18",
           letterSpacing: "0.02em",
         }}>
-          Lication
+          Frovero
         </span>
 
         <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
@@ -231,10 +231,10 @@ export default function Home() {
           fontFamily: "'Playfair Display', Georgia, serif",
           fontSize: "1rem", color: "#1c1b18",
         }}>
-          Lication
+          Frovero
         </span>
-        <span style={{ fontSize: "0.72rem", color: "#b0ad a6" }}>
-          © 2026 Lication. Built for freelancers.
+        <span style={{ fontSize: "0.72rem", color: "#b0ada6" }}>
+          © 2026 Frovero. Built for freelancers.
         </span>
       </footer>
     </main>
